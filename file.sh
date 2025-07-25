@@ -23,17 +23,17 @@ echo ""
 
 # Menú principal: encode or decode
 echo -e "${yellowColour}Do you want to encode or decode your message?${endColour}"
-echo -e "${greenColour}1) Encode${endColour}"
+echo -e "\n${greenColour}1) Encode${endColour}"
 echo -e "${greenColour}2) Decode${endColour}\n"
 read -p "Enter your choice: " action
 
 if [[ "$action" == "1" ]]; then
-  echo -e "${yellowColour}Choose an encoding option:${endColour}"
+  echo -e "${yellowColour}[+] Choose an encoding option:${endColour}"
   echo -e "${greenColour}1) Base64${endColour}"
   echo -e "${greenColour}2) Hexadecimal${endColour}"
   echo -e "${greenColour}3) Binary${endColour}\n"
   read -p "Enter your choice: " option
-  echo -ne "${yellowColour}Give me your message to encode: ${endColour}"
+  echo -ne "\n${yellowColour}Give me your message to encode: ${endColour}"
   read name
 
   case $option in
@@ -44,7 +44,7 @@ if [[ "$action" == "1" ]]; then
   esac
 
 elif [[ "$action" == "2" ]]; then
-  echo -e "${yellowColour}Choose a decoding option:${endColour}"
+  echo -e "\n${yellowColour}[+] Choose a decoding option:${endColour}\n"
   echo -e "${greenColour}1) Base64${endColour}"
   echo -e "${greenColour}2) Hexadecimal${endColour}"
   echo -e "${greenColour}3) Binary${endColour}\n"
