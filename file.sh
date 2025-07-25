@@ -44,12 +44,12 @@ if [[ "$action" == "1" ]]; then
   esac
 
 elif [[ "$action" == "2" ]]; then
-  echo -e "\n${yellowColour}[+] Choose a decoding option:${endColour}\n"
+  echo -ne "\n${yellowColour}[+] Choose a decoding option:${endColour}\n"
   echo -e "${greenColour}1) Base64${endColour}"
   echo -e "${greenColour}2) Hexadecimal${endColour}"
   echo -e "${greenColour}3) Binary${endColour}\n"
   read -p "Enter your choice: " option
-  echo -ne "${yellowColour}Give me your message to decode: ${endColour}"
+  echo -ne "\n${yellowColour}Give me your message to decode: ${endColour}"
   read name
 
   case $option in
